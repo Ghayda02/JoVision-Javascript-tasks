@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task12</title>
+    </head>
+
+    <body>
+        <input type="text" name="Name" id="name" placeholder="Name">
+        <input type="text" name="Age" id="age" placeholder="Age">
+        <button id="button0">Submit</button>
+        
+        <script>        
+            const btn = document.getElementById("button0");
+            btn.addEventListener("click", function () {
+                const person = {
+                    name: document.getElementById("name").value,
+                    age: document.getElementById("age").value,
+                    timespan: new Date()
+                };
+
+                window.alert(`Your name is ${person.name} 
+                \n Your age is ${person.age}
+                \n ${person.timespan}`);
+            });
+
+        </script>
+    </body>
+
+</html>
