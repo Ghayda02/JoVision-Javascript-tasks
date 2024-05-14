@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Task10</title>
+        <title>Task11</title>
     </head>
 
     <body>
@@ -14,13 +14,19 @@
         <script>        
             const btn = document.getElementById("button0");
             btn.addEventListener("click", function () {
-                var result;
-                let fetchRes = fetch(
-                    "https://api.ipify.org/");
-                    fetchRes.then(res =>
-                    res.text()).then(d => {
-                    result = d;}).then(() => {
-                    document.getElementById("button0").innerHTML = result});
+                let url ="https://api.ipify.orgx/";
+                let fetchRes = fetch(url);
+                fetchRes.then(res =>
+                {if(res . ok)
+                    {
+                    return res.text()
+                    } 
+                }).then(d => {
+                result = d;}).then(() => {
+                document.getElementById("button0").innerHTML = result}).
+                catch((error) => {
+                window.alert(error)
+                });
             
             });
             
