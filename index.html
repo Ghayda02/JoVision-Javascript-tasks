@@ -9,10 +9,10 @@
     </head>
 
     <body>
-        <button>Click me</button>
+        <button id="button0">Click me</button>
         
         <script>        
-            const btn = document.querySelector("button");
+            const btn = document.getElementById("button0");
             btn.addEventListener("click", function () {
                 console.log('Hello World');
             });
